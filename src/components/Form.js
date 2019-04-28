@@ -1,11 +1,12 @@
 import React from 'react';
 
 const Form = (props) => {
-  return ( 
+  return (
+    <div className="form">
     <form>
-      <input value={props.value} onChange={props.change} type="text" placeholder="Wpisz nazwę "/>
+      <input value={props.value} onChange={props.change} type="text" placeholder="Enter city name "/>
       </form>
-    
+      </div> 
    );
 }
  
