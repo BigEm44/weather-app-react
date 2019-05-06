@@ -56,19 +56,17 @@ class App extends Component {
   };
 
   handleInputForm = (e) => {
-    console.log(e.target.value);
-
     this.setState({
       value: e.target.value
     });
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.value.length === 0) return;
-    if (prevState.value !== this.state.value) {
-      const API = `https://api.openweathermap.org/data/2.5/weather?q=${
-        this.state.value
-      }&APPID=${APIkey}&units=metric`;
+handleClickForm = (e) =>{
+  e.preventDefault()
+ 
+
+    
+      const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=${APIkey}&units=metric`;
 
       fetch(API)
         .then((response) => {
@@ -101,9 +99,9 @@ class App extends Component {
             city: prevState.value
           }));
         });
-    }
+    
   }
-
+ 
   render() {
     const{conditions} = this.state
     let bgc = {
@@ -142,7 +140,11 @@ class App extends Component {
    
       <div className="App" style={bgc}>
         <Header />
-        <Form value={this.state.value} change={this.handleInputForm} />
+        <Form 
+        value={this.state.value} 
+        change={this.handleInputForm}
+        submit={this.handleClickForm}
+        />
         <Results state={this.state} />
       </div>
     );
