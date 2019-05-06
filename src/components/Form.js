@@ -9,7 +9,7 @@ const Form = (props) => {
         value={props.value} 
         type="text" 
         placeholder="Enter city name "/>
-      <button>Find city</button>
+      <button>Find</button>
       </form>
       </div> 
    );
