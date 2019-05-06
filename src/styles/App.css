@@ -13,12 +13,26 @@
   background-color: rgba(256, 256, 256, 0.4);
 }
 
+.form input,
+.form button {
+  font-size: 30px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
 
 .form input {
   margin-top: 0;
   padding-top: 0;
-  font-size: 35px;
+}
 
+.form button {
+  margin-left: 5px;
+  background-color: #bbb;
+  transition: .3s;
+}
+
+.form button:hover {
+  background-color: #eee;
 }
 
 .results h2 {
