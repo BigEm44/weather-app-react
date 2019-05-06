@@ -63,8 +63,6 @@ class App extends Component {
 
 handleClickForm = (e) =>{
   e.preventDefault()
- 
-
     
       const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=${APIkey}&units=metric`;
 
